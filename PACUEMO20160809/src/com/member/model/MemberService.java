@@ -18,4 +18,14 @@ public class MemberService {
 		
 		return null;
 	}
+	
+	public String checkMail(String mail){
+		MemberVO memberVO = dao.findByUserMail(mail);
+		
+		if(memberVO != null){
+			return "false";
+		}
+		
+		return "true";
+	}
 }

@@ -45,11 +45,7 @@
             <h2 class="center hdr-l"> 以你的電郵地址註冊 </h2>
             <form id="js-register-with-email" method="post" action="/tw/xhr/json/sign-up-for-spotify.php" novalidate>
               <div class="hidden ajax-spinner"></div>
-              <div class="js-general-error alert alert-info hidden" data-error="糟糕！發生錯誤，請再次嘗試或到我們的<a href=&quot;/help/&quot;>說明中心</a>"></div>
-              <input type="hidden" name="sp_csrf" value="dWRzkx7-IVVNktbbdD0ETzGEHVCr5_0EtWxngbBbpsg">
-              <input id="creation_flow" name="creation_flow" type="hidden" value="">
-              <input type="hidden" id="register-forward-url" name="forward_url" value="https://www.spotify.com/tw/account/overview/">
-              <input type="hidden" id="register-pre-tick-eula" name="signup_pre_tick_eula" value="true">
+              <div class="js-general-error alert alert-info hidden" data-error="糟糕！發生錯誤，請再次嘗試或到我們的<a href=''>說明中心</a>"></div>
               <fieldset>
                 <ul>
                   <li>
@@ -70,7 +66,7 @@
                   </li>
                   <li>
                     <label class="sr-only" for="register-email">Email:</label>
-                    <input type="email" id="register-email" name="email" value="" placeholder="Email" required="" data-msg-required="請輸入你的電郵地址。" data-msg-email="你所提供的電子郵件無效。" data-rule-remote="/tw/xhr/json/isEmailAvailable.php" data-msg-remote="很抱歉，此電郵地址已有用戶使用。" maxlength="100">
+                    <input type="email" id="register-email" name="email" value="" placeholder="Email" required="" data-msg-required="請輸入你的電郵地址。" data-msg-email="你所提供的電子郵件無效。" data-rule-remote="checkMail.do?model=checkMail" data-msg-remote="很抱歉，此電郵地址已有用戶使用。" maxlength="100">
                   </li>
                   <li>
                     <label class="sr-only" for="register-confirm-email">確認電郵:</label>
@@ -144,7 +140,7 @@ $(function(){
 							}else{
 								error.insertAfter(element);
 							};
-						},
+						}
 	});		
 	var date = new Date();
 	var year = date.getFullYear();
