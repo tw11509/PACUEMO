@@ -31,12 +31,10 @@
         <section class="signup-select">
           <form id="js-register-with-facebook" method="post" role="form" action="/tw/xhr/json/sign-up-for-spotify-fb.php" novalidate>
             <div class="hidden ajax-spinner"></div>
-            <input type="hidden" name="sp_csrf" value="dWRzkx7-IVVNktbbdD0ETzGEHVCr5_0EtWxngbBbpsg">
-            <input id="creation_flow" name="creation_flow" type="hidden" value="">
             <div class="content">
               <div class="js-general-error alert alert-info hidden" data-error="糟糕！發生錯誤，請再次嘗試或到我們的<a href=&quot;/help/&quot;>說明中心</a>"></div>
               <a href="#" class="btn btn-facebook btn-sm btn-block js-signup-fb" id="select-button-signup-fb"> 以 Facebook 帳戶註冊 </a> <strong class="line-thru">或</strong> <a href="/tw/signup/" class="primary js-link" data-section="register" id="select-link-signup-email"> 以你的電郵地址註冊 </a>
-              <p class="primary"> 已經擁有帳戶？ <a id="select-link-login" data-section="login" href="https://www.spotify.com/tw/login/?continue=https%3A//www.spotify.com/tw/account/overview/">登入</a> </p>
+              <p class="primary"> 已經擁有帳戶？ <a id="select-link-login" data-section="login" href="">登入</a> </p>
             </div>
           </form>
         </section>
